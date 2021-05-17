@@ -1,0 +1,13 @@
+.MatchSmallCards{ 
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    
+    .vs{
+        margin-left: 2em;
+    }
+    .opponent-team, .match-result, .match-date, .match-venue{
+        padding: 10px;
+       margin-left:10px;
+    }
+}
