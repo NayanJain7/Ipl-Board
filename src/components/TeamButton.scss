@@ -1,0 +1,30 @@
+.TeamButton {
+  margin-top: 30px;
+}
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 0.8rem;
+
+  font-weight: 100;
+  font-family: inherit;
+  margin-left: 3px;
+}
+
+button.big-button {
+  padding: 1em 1.85em;
+  border: 2px solid #3498db;
+  border-radius: 50px;
+  background: #fff;
+  margin-right: 2px;
+}
+.big-button:hover {
+  background: #497fd6;
+  border: 2px solid white;
+  font-size: small;
+  color: #212121;
+}

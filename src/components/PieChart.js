@@ -19,13 +19,15 @@ export const PieChart = ({ team }) => {
           legend: "none",
           pieSliceText: "label",
           title: "Wins / Looses",
-          backgroundColor: "#212121",
+          backgroundColor: "#1F2739",
           pieStartAngle: 100,
           titleTextStyle: { color: "#FFF" },
+
           slices: {
             0: { color: "#dc3912" },
             1: { color: "#009688" },
           },
+        
         }}
         rootProps={{ "data-testid": "4" }}
       />

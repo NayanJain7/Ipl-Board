@@ -1,44 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Chart } from "react-google-charts";
+import { useParams } from "react-router";
 
 const BarChart = () => {
+  const [teamWinYear, setTeamWinYear] = useState([]);
+
+  const { teamName } = useParams();
+
+  useEffect(() => {
+    const fetchWinsWithYear = async () => {
+      const response = await fetch(
+        `${process.env.REACT_APP_DATA_API_URL}/team/all-wins/${teamName}`
+      );
+
+      const data = await response.json();
+      setTeamWinYear(data);
+    };
+
+    fetchWinsWithYear();
+  }, [teamName]);
+
+  const items = [["Year", "Wins"]];
+
+  for (let key in teamWinYear) {
+    items.push([`${key}`, teamWinYear[key]]);
+  }
+
   return (
-    <div>
+    <>
       <Chart
-        width={"500px"}
-        height={"300px"}
-        chartType="Bar"
+        width={"600px"}
+        height={"320px"}
+        chartType="BarChart"
         loader={<div>Loading Chart</div>}
-        data={[
-          ["Year", "Wins"],
-          ["2008", 7]
-          [("2009", 10)],
-          ["2010", 9],
-          ["2011", 11],
-          ["2012", 12],
-          ["2013", 14],
-          ["2014", 15],
-          ["2015", 17],
-          ["2016", 10],
-          ["2017", 17],
-          ["2018", 14],
-          ["2019", 9][("2020", 16)],
-        ]}
+        data={items}
         options={{
-          // Material design options
-          chart: {
-            title: "Team Performance",
-            subtitle: "Wins: 2008-2020",
-            bar: { groupWidth: "50%" },
+          subtitle: "Matches, Wins: 2008-2020",
+
+          title: `Team Performance
+                        Matches, Wins: 2008-2020`,
+
+          animation: {
+            duration: 1000,
+            easing: "out",
+            startup: true,
+            statusbar: true,
           },
-          colors: ["#FB7A21"],
-          backgroundColor: "#212121",
+
+          bar: { groupWidth: "90%" },
         }}
         // For tests
-        rootProps={{ "data-testid": "1" }}
+        rootProps={{ "data-testid": "3" }}
       />
-    </div>
+    </>
   );
 };
-
 export default BarChart;

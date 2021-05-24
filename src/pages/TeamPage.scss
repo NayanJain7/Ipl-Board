@@ -9,18 +9,11 @@
     grid-column: span 3;
     justify-self: center;
     align-self: end;
-
-    .latest-matches {
-      position: absolute;
-      left: 3%;
-      top: 70%;
-      font-size: x-large;
-    }
   }
 
   .team-name {
     font-size: 4rem;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     font-variant: small-caps;
   }
 

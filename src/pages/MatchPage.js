@@ -2,7 +2,6 @@ import { React, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { MatchDetailCard } from "../components/MatchDetailCard";
 import { YearSelector } from "../components/YearSelector";
-
 import "./MatchPage.scss";
 
 export const MatchPage = () => {
@@ -11,7 +10,7 @@ export const MatchPage = () => {
   useEffect(() => {
     const fetchMatches = async () => {
       const response = await fetch(
-        `http://localhost:8080/team/${teamName}/matches/?year=${year}`
+        `${process.env.REACT_APP_DATA_API_URL}/team/${teamName}/matches/?year=${year}`
       );
       const data = await response.json();
       setMatches(data);
@@ -19,8 +18,10 @@ export const MatchPage = () => {
     fetchMatches();
   }, [teamName, year]);
 
-  if (matches.length === 0) {
-    return <h1>Team Not Found</h1>;
+  if (!matches.length) {
+    return (
+      <h1 style={{ textAlign: "center", marginTop: "14%"}}><b>Team Not Found</b></h1>
+    );
   }
 
   return (

@@ -1,0 +1,19 @@
+.HomePage {
+  .header-section {
+    font-size: 1.8rem;
+    margin: 2em 0;
+    font-variant: small-caps;
+    text-align: center;
+  }
+  .typing-text {
+    text-align: center;
+    color: #158cba;
+    margin: 1em 0;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+}

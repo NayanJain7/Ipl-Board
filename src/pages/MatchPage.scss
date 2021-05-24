@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-column-gap: 20px;
+  margin-top: 8.2em;
 
   .year-selector {
     justify-self: end;
@@ -9,7 +10,7 @@
   }
 
   .page-heading {
-    margin: 20px auto;
+    margin: 22px auto;
     font-variant: small-caps;
   }
 }
