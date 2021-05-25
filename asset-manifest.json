@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Ipl-Board/static/css/main.050f66c2.chunk.css",
-    "main.js": "/Ipl-Board/static/js/main.4ad2831e.chunk.js",
-    "main.js.map": "/Ipl-Board/static/js/main.4ad2831e.chunk.js.map",
+    "main.js": "/Ipl-Board/static/js/main.0d8d8214.chunk.js",
+    "main.js.map": "/Ipl-Board/static/js/main.0d8d8214.chunk.js.map",
     "runtime-main.js": "/Ipl-Board/static/js/runtime-main.6335249e.js",
     "runtime-main.js.map": "/Ipl-Board/static/js/runtime-main.6335249e.js.map",
     "static/js/2.f687fb5a.chunk.js": "/Ipl-Board/static/js/2.f687fb5a.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.6335249e.js",
     "static/js/2.f687fb5a.chunk.js",
     "static/css/main.050f66c2.chunk.css",
-    "static/js/main.4ad2831e.chunk.js"
+    "static/js/main.0d8d8214.chunk.js"
   ]
 }
