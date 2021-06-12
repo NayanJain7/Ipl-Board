@@ -47,7 +47,7 @@ const Footer = () => {
           </a>
         </p>
         <p>
-           Note: Data is available from 2008 - 2021.
+           Note: Ipl Data is available from 2008 - 2020.
         </p>
       </footer>
     </>

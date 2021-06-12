@@ -34,7 +34,7 @@ export const TeamPage = () => {
       <div className="TeamPage">
         <div className="team-name-section">
           <h1 className="team-name">{team.teamName}</h1>
-          {/* <h2 className="latest-matches">Latest Matches</h2> */}
+         
         </div>
 
         <PieChart team={team} />
